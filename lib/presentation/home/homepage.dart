@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_web/presentation/experience/experience.dart';
 import 'package:portfolio_web/presentation/home/home_intro.dart';
 import 'package:portfolio_web/presentation/project/projects.dart';
 import 'package:portfolio_web/presentation/home/widgets/navbar.dart';
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           width: screenWidth(context),
           child: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [NavBar(), HomeIntro(), Projects(), ],
+            children: [NavBar(), HomeIntro(), Projects(), Experience()],
           ),
         ),
       ),

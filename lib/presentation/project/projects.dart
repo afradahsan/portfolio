@@ -4,6 +4,7 @@ import 'package:portfolio_web/core/extensions/hover_extensions.dart';
 import 'package:portfolio_web/presentation/project/widgets/project_container.dart';
 import 'package:portfolio_web/utils/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+
 class Projects extends StatefulWidget {
   const Projects({super.key});
 
@@ -20,7 +21,7 @@ class _ProjectsState extends State<Projects> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 450,
+      height: 490,
       child: Column(
         children: [
           Text('EXPERIENCED IN',
@@ -79,7 +80,8 @@ class _ProjectsState extends State<Projects> {
                       fontFamily: GoogleFonts.poppins().fontFamily,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 8)),
-              sizedtwenty(context), sizedten(context),
+              sizedtwenty(context),
+              sizedten(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -96,8 +98,7 @@ class _ProjectsState extends State<Projects> {
                         onTap:
                             'https://www.amazon.com/dp/B0CP9ZQ2NF/ref=apps_sf_sta',
                       )),
-
-                      InkWell(
+                  InkWell(
                       onTap: () {},
                       onHover: (hovering) {
                         setState(() => isHovering2 = hovering);
@@ -107,11 +108,9 @@ class _ProjectsState extends State<Projects> {
                         title: 'Portfolio',
                         isHovering: isHovering2,
                         gitTap: 'https://github.com/afradahsan/portfolio',
-                        onTap:
-                            '',
+                        onTap: '',
                       )),
-
-                      InkWell(
+                  InkWell(
                       onTap: () {},
                       onHover: (hovering) {
                         setState(() => isHovering3 = hovering);
@@ -126,32 +125,6 @@ class _ProjectsState extends State<Projects> {
                       )),
                 ],
               ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              // ProjectContainer(
-              //         assetimage: 'assets/wanderloom-promo.png',
-              //         title: 'Portfolio')
-              //     .moveUpOnHover,
-              // ProjectContainer(
-              //         assetimage: 'assets/wanderloom-promo.png',
-              //         title: 'Wanderloom')
-              //     .moveUpOnHover,
-              // ProjectContainer(
-              //         assetimage: 'assets/wanderloom-promo.png',
-              //         title: 'Parkwiser')
-              //     .moveUpOnHover,
-              // ProjectContainer(
-              //         assetimage: 'assets/wanderloom-promo.png',
-              //         title: 'Weather App')
-              //     .moveUpOnHover,
-              // ProjectContainer(
-              //         assetimage: 'assets/wanderloom-promo.png',
-              //         title: 'Wanderloom')
-              //         .moveUpOnHover
-              //   ],
-              // )
             ],
           )
         ],
