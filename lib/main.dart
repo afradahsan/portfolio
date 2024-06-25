@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Portfolio Web',
+      
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: KTextTheme.darkTextTheme,

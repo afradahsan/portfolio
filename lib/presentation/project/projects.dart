@@ -4,8 +4,6 @@ import 'package:portfolio_web/core/extensions/hover_extensions.dart';
 import 'package:portfolio_web/presentation/project/widgets/project_container.dart';
 import 'package:portfolio_web/utils/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-import 'dart:html' as html;
-
 class Projects extends StatefulWidget {
   const Projects({super.key});
 
@@ -22,7 +20,7 @@ class _ProjectsState extends State<Projects> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: 450,
       child: Column(
         children: [
           Text('EXPERIENCED IN',
@@ -86,34 +84,46 @@ class _ProjectsState extends State<Projects> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
-                      onTap: (){
-                        html.window.open('https://github.com/afradahsan/wanderloom', '_blank');
-                      },
+                      onTap: () {},
                       onHover: (hovering) {
                         setState(() => isHovering = hovering);
                       },
                       child: ProjectContainer(
-                          assetimage: 'assets/wanderloom.png',
-                          title: 'Wanderloom',
-                          isHovering: isHovering)),
-                  InkWell(
-                      onTap: () => (),
+                        assetimage: 'assets/wanderloom.png',
+                        title: 'Wanderloom',
+                        isHovering: isHovering,
+                        gitTap: 'https://github.com/afradahsan/wanderloom',
+                        onTap:
+                            'https://www.amazon.com/dp/B0CP9ZQ2NF/ref=apps_sf_sta',
+                      )),
+
+                      InkWell(
+                      onTap: () {},
                       onHover: (hovering) {
                         setState(() => isHovering2 = hovering);
                       },
                       child: ProjectContainer(
-                          assetimage: 'assets/wanderloom-promo.png',
-                          title: 'Wanderloom',
-                          isHovering: isHovering2)),
-                  InkWell(
-                      onTap: () => (),
+                        assetimage: 'assets/wanderloom.png',
+                        title: 'Portfolio',
+                        isHovering: isHovering2,
+                        gitTap: 'https://github.com/afradahsan/portfolio',
+                        onTap:
+                            '',
+                      )),
+
+                      InkWell(
+                      onTap: () {},
                       onHover: (hovering) {
                         setState(() => isHovering3 = hovering);
                       },
                       child: ProjectContainer(
-                          assetimage: 'assets/wanderloom-promo.png',
-                          title: 'Wanderloom',
-                          isHovering: isHovering3)),
+                        assetimage: 'assets/wanderloom.png',
+                        title: 'Parkwiser',
+                        isHovering: isHovering3,
+                        gitTap: 'https://github.com/afradahsan/PARK-R',
+                        onTap:
+                            'https://www.amazon.com/dp/B0CW18LMSM/ref=apps_sf_sta',
+                      )),
                 ],
               ),
 

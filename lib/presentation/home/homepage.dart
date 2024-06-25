@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           width: screenWidth(context),
           child: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [NavBar(), HomeIntro(), Projects()],
+            children: [NavBar(), HomeIntro(), Projects(), ],
           ),
         ),
       ),
