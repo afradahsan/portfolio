@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/core/extensions/hover_extensions.dart';
 import 'package:portfolio_web/presentation/home/widgets/borderedbutton.dart';
 import 'package:portfolio_web/presentation/home/widgets/navbutton.dart';
@@ -43,7 +44,7 @@ class _NavBarState extends State<NavBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text('AF'),
+          Text('AF', style: TextStyle(fontFamily: GoogleFonts.montserrat().fontFamily, fontWeight: FontWeight.bold),),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
