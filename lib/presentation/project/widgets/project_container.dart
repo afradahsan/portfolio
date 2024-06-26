@@ -47,7 +47,12 @@ class _ProjectContainerState extends State<ProjectContainer> {
                 curve: Curves.ease,
                 height: widget.isHovering ? 70 : 60,
                 width: widget.isHovering ? 420 : 390,
-                color: const Color.fromARGB(180, 0, 0, 0),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(180, 0, 0, 0),
+                  borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10)
+                )),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                   child: Row(

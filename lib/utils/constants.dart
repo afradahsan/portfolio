@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:portfolio_web/presentation/home/homepage.dart';
+import 'package:portfolio_web/presentation/project/projects.dart';
 
 SizedBox sizedten(BuildContext context) {
   return SizedBox(
@@ -43,3 +46,4 @@ double screenWidth(BuildContext context) {
 double screenHeight(BuildContext context) {
   return MediaQuery.of(context).size.height;
 }
+

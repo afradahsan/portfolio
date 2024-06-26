@@ -21,50 +21,53 @@ class _ProjectsState extends State<Projects> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 490,
+      height: 550,
       child: Column(
         children: [
-          Text('EXPERIENCED IN',
+          GradientText('EXPERIENCED IN.',
+              colors: [Color(0xfffdfdfd), Color(0xffffffff).withOpacity(0.3)],
+              gradientDirection: GradientDirection.ttb,
               style: TextStyle(
-                  fontSize: 26,
+                  fontSize: 30,
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontWeight: FontWeight.w600,
-                  color: Color.fromRGBO(197, 197, 197, 1),
                   letterSpacing: 8)),
+          sizedtwenty(context),
           sizedtwenty(context),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/flutter-glyph-logo.png',
-                height: 25,
+                height: 35,
               ).moveUpOnHover,
               sizedwtwenty(context),
               sizedwtwenty(context),
               Image.asset(
                 'assets/firebase.png',
-                height: 25,
+                height: 35,
               ).moveUpOnHover,
               sizedwtwenty(context),
               sizedwtwenty(context),
               Image.asset(
                 'assets/nodejs.png',
-                height: 25,
+                height: 35,
               ).moveUpOnHover,
               sizedwtwenty(context),
               sizedwtwenty(context),
               Image.asset(
                 'assets/html.png',
-                height: 28,
+                height: 38,
               ).moveUpOnHover,
               sizedwtwenty(context),
               sizedwtwenty(context),
               Image.asset(
                 'assets/mongodb.png',
-                height: 28,
+                height: 38,
               ).moveUpOnHover,
             ],
           ),
+          sizedtwenty(context),
           sizedtwenty(context),
           sizedtwenty(context),
           Column(
@@ -81,7 +84,7 @@ class _ProjectsState extends State<Projects> {
                       fontWeight: FontWeight.w600,
                       letterSpacing: 8)),
               sizedtwenty(context),
-              sizedten(context),
+              sizedtwenty(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -104,7 +107,7 @@ class _ProjectsState extends State<Projects> {
                         setState(() => isHovering2 = hovering);
                       },
                       child: ProjectContainer(
-                        assetimage: 'assets/wanderloom.png',
+                        assetimage: 'assets/portfolio.png',
                         title: 'Portfolio',
                         isHovering: isHovering2,
                         gitTap: 'https://github.com/afradahsan/portfolio',
@@ -116,7 +119,7 @@ class _ProjectsState extends State<Projects> {
                         setState(() => isHovering3 = hovering);
                       },
                       child: ProjectContainer(
-                        assetimage: 'assets/wanderloom.png',
+                        assetimage: 'assets/parkwiser.png',
                         title: 'Parkwiser',
                         isHovering: isHovering3,
                         gitTap: 'https://github.com/afradahsan/PARK-R',

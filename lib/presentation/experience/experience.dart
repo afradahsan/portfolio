@@ -8,6 +8,8 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 class Experience extends StatelessWidget {
   const Experience({Key? key}) : super(key: key);
 
+  static const String route = '/experience';
+
   @override
   Widget build(BuildContext context) {
     return Container(

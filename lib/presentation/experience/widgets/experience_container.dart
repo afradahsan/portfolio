@@ -26,6 +26,7 @@ class ExperienceContainer extends StatelessWidget {
                 jobTitle,
                 style: TextStyle(
                   fontSize: 24,
+                  color: white,
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontWeight: FontWeight.w600,
                 ),
@@ -46,7 +47,7 @@ class ExperienceContainer extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 fontFamily: GoogleFonts.poppins().fontFamily,
-                color: white.withOpacity(0.5),
+                color: const Color(0xffFF8660),
                 fontWeight: FontWeight.w400,
               )),
           sizedfive(context),
@@ -55,7 +56,7 @@ class ExperienceContainer extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontFamily: GoogleFonts.poppins().fontFamily,
-              color: white.withOpacity(0.3),
+              color: white.withOpacity(0.5),
               fontWeight: FontWeight.w400,
             ),
           )

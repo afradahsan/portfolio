@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +5,7 @@ import 'package:portfolio_web/core/extensions/hover_extensions.dart';
 import 'package:portfolio_web/utils/constants.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'dart:html';
 
 class HomeIntro extends StatelessWidget {
   const HomeIntro({super.key});
@@ -25,7 +24,7 @@ class HomeIntro extends StatelessWidget {
 
   Widget desktopHome(BuildContext context) {
     return Container(
-      height: screenHeight(context) - 100,
+      height: screenHeight(context) - 50,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -37,7 +36,7 @@ class HomeIntro extends StatelessWidget {
               width: 250,
             ),
           ),
-          sizedten(context),
+          sizedtwenty(context),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -85,7 +84,9 @@ class HomeIntro extends StatelessWidget {
           ElevatedButton.icon(
               style: const ButtonStyle(
                   padding: WidgetStatePropertyAll(EdgeInsets.all(20))),
-              onPressed: () {},
+              onPressed: () {
+                downloadFile('assets/Afrad-Ahsan-Resume (Flutter Developer).pdf');
+              },
               icon: const Icon(
                 Icons.play_for_work_rounded,
                 color: Colors.black,
@@ -101,5 +102,11 @@ class HomeIntro extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  downloadFile(url) {
+    AnchorElement anchorElement = AnchorElement(href: url);
+    anchorElement.download = "Afrad Ahsan Resume - Flutter Developer";
+    anchorElement.click();
   }
 }
